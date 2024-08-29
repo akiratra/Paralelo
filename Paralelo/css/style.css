@@ -1,0 +1,85 @@
+/* Importa a fonte 'Montserrat' do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+/* Estiliza o elemento de navegação */
+nav {
+    height: 125px; /* Define a altura da barra de navegação */
+    max-width: 1480px; /* Define a largura máxima da barra de navegação */
+    min-width: 1080px; /* Define a largura mínima da barra de navegação */
+    background-color: black; /* Define a cor de fundo da barra de navegação */
+    display: flex; /* Usa o layout flexível para organizar os itens */
+    justify-content: space-between; /* Distribui os itens com espaço igual entre eles */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 0 20px; /* Adiciona espaçamento interno de 20px nas laterais */
+}
+
+/* Estiliza a lista não ordenada dentro da barra de navegação */
+nav ul {
+    display: flex; /* Usa o layout flexível para organizar os itens da lista em linha */
+    flex-direction: row; /* Alinha os itens da lista horizontalmente */
+    margin: 0; /* Remove a margem padrão da lista */
+    padding: 0; /* Remove o preenchimento padrão da lista */
+}
+
+/* Estiliza cada item da lista dentro da barra de navegação */
+nav ul li {
+    list-style: none; /* Remove os marcadores da lista */
+    margin-left: 20px; /* Adiciona uma margem à esquerda de cada item */
+    position: relative; /* Define a posição relativa para permitir o posicionamento absoluto dos pseudo-elementos */
+    padding: 0 25px 0 0; /* Adiciona um preenchimento à direita de 25px */
+}
+
+/* Estiliza os links dentro dos itens da lista */
+nav ul li a {
+    font-family: 'Montserrat', sans-serif; /* Define a fonte dos links */
+    font-size: 16px; /* Define o tamanho da fonte dos links */
+    color: white; /* Define a cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    padding: 10px; /* Adiciona um preenchimento de 10px ao redor do texto dos links */
+    transition: color 0.3s ease; /* Adiciona uma transição suave para a cor do texto */
+    position: relative; /* Define a posição relativa para o posicionamento do pseudo-elemento ::after */
+}
+
+/* Estiliza o elemento <span> dentro dos links */
+nav ul li a span {
+    margin-right: 5px; /* Adiciona uma margem à direita do <span> */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    color: white; /* Define a cor do texto do <span> */
+}
+
+/* Adiciona uma linha abaixo dos links com pseudo-elemento ::after */
+nav ul li a::after {
+    content: ""; /* Define o conteúdo do pseudo-elemento como vazio */
+    position: absolute; /* Posiciona o pseudo-elemento absolutamente dentro do elemento pai */
+    width: 0; /* Define a largura inicial da linha como 0 */
+    height: 2px; /* Define a altura da linha */
+    bottom: 50%; /* Alinha a linha verticalmente ao meio do elemento pai */
+    left: calc(25px + 1.25em); /* Define a posição horizontal da linha para não sobrepor o <span> */
+    background-color: #f0a500; /* Define a cor da linha */
+    transition: width 0.3s ease-in-out; /* Adiciona uma transição suave para a largura da linha */
+}
+
+/* Expande a largura da linha ao passar o mouse ou quando o link está ativo */
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: calc(100% - 25px - 1.25em); /* Define a largura da linha para preencher a área restante */
+}
+
+/* Altera a cor do texto dos links ao passar o mouse ou quando o link está ativo */
+nav ul li a:hover,
+nav ul li a.active {
+    color: #f0a500; /* Define a cor do texto como laranja ao passar o mouse ou quando ativo */
+}
+
+/* Estiliza a imagem do logo dentro da barra de navegação */
+nav #logo img {
+    height: 75px; /* Define a altura da imagem do logo */
+    margin: 25px; /* Adiciona uma margem de 25px ao redor da imagem */
+}
+
+/* Estiliza a imagem dentro do cabeçalho */
+header img {
+    display: block; /* Remove o espaço abaixo da imagem que geralmente é causado pelo display inline */
+    width: 100%; /* Define a largura da imagem para 100% da largura do elemento pai */
+    height: auto; /* Mantém a proporção da imagem */
+}

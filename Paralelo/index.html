@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Define o conjunto de caracteres e a configuração de visualização para dispositivos móveis -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Define o título da página que aparece na aba do navegador -->
+    <title>Paralello Arquitetura e Construção</title>
+    
+    <!-- Link para o arquivo CSS externo para estilização da página -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Barra de navegação -->
+    <nav>
+        <!-- Div para o logo da empresa -->
+        <div id="logo">
+            <a href="index.html">
+                <!-- Imagem do logo que, ao ser clicada, leva à página inicial -->
+                <img src="img/logo-white.png" alt="Paralello Arquitetura e Construção Logo">
+            </a>
+        </div>
+
+        <!-- Menu principal -->
+        <div id="main-menu" class="col-md-12">
+            <ul class="nav">
+                <!-- Item de menu com a classe 'active' para indicar a página atual -->
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"><span>01.</span> HOME</a>
+                </li>
+                <!-- Outros itens de menu -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span>02.</span> TRABALHOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span>03.</span> SCANEAMENTO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span>04.</span> SOBRE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span>05.</span> LANÇAMENTOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span>06.</span> CONTATOS</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Cabeçalho da página com uma imagem -->
+    <header>
+        <!-- Imagem que ocupa 100% da largura da tela -->
+        <img src="img/project-1.jpg" width="100%" alt="Projeto">
+    </header>
+
+    <!-- Script para adicionar a classe 'active' ao item de menu correspondente à página atual -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtém o caminho da página atual (ex: "index.html")
+            const currentPage = location.pathname.split('/').pop();
+            
+            // Seleciona todos os links dentro dos itens de menu
+            const menuItems = document.querySelectorAll('nav ul li a');
+
+            // Percorre cada item do menu
+            menuItems.forEach(item => {
+                // Verifica se o atributo 'href' do item corresponde à página atual
+                if (item.getAttribute('href') === currentPage) {
+                    // Adiciona a classe 'active' ao item correspondente
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>
