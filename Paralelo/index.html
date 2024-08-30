@@ -1,79 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br"> <!-- Define o tipo de documento como HTML5 e a linguagem da página como Português (Brasil) -->
 <head>
-    <!-- Define o conjunto de caracteres e a configuração de visualização para dispositivos móveis -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8, garantindo suporte a diferentes idiomas e símbolos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Faz com que o layout seja ajustado corretamente para diferentes dispositivos, como celulares e tablets -->
+    <title>Parallelo Arquitetura e Construção</title> <!-- Define o título que aparece na aba do navegador quando a página é carregada -->
     
-    <!-- Define o título da página que aparece na aba do navegador -->
-    <title>Paralello Arquitetura e Construção</title>
-    
-    <!-- Link para o arquivo CSS externo para estilização da página -->
+    <!-- Importa o arquivo de estilos CSS para dar estilo à página -->
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Importação da fonte Montserrat do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Barra de navegação -->
-    <nav>
-        <!-- Div para o logo da empresa -->
-        <div id="logo">
-            <a href="index.html">
-                <!-- Imagem do logo que, ao ser clicada, leva à página inicial -->
-                <img src="img/logo-white.png" alt="Paralello Arquitetura e Construção Logo">
+
+    <nav> <!-- Início da barra de navegação do site -->
+        <div id="mainMenu-geral"> <!-- Contêiner principal para o menu de navegação -->
+
+        <div id="logo"> <!-- Div para o logotipo -->
+            <a href="index.html"> <!-- Link que redireciona para a página inicial -->
+                <img src="img/logo-white.png"> <!-- Imagem da logo do site, que está no diretório "img" -->
             </a>
         </div>
-
-        <!-- Menu principal -->
-        <div id="main-menu" class="col-md-12">
-            <ul class="nav">
-                <!-- Item de menu com a classe 'active' para indicar a página atual -->
-                <li class="nav-item active">
-                    <a class="nav-link" href="#"><span>01.</span> HOME</a>
+        
+        <div id="mainMenu"> <!-- Contêiner que contém o menu principal -->
+            <ul> <!-- Lista não ordenada (ul) que contém os itens do menu -->
+                <!-- Cada "li" representa um item do menu -->
+                <li>
+                    <span>1.</span> <!-- Um número (span) associado ao item -->
+                    <a href="#"> Home</a> <!-- Link para a página "Home" -->
                 </li>
-                <!-- Outros itens de menu -->
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><span>02.</span> TRABALHOS</a>
+                <li>
+                    <span>2.</span>
+                    <a href="#"> Trabalhos</a> <!-- Link para a página "Trabalhos" -->
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><span>03.</span> SCANEAMENTO</a>
+                <li>
+                    <span>3.</span>
+                    <a href="#"> Scaneamento</a> <!-- Link para a página "Scaneamento" -->
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><span>04.</span> SOBRE</a>
+                <li>
+                    <span>4.</span>
+                    <a href="#"> Sobre</a> <!-- Link para a página "Sobre" -->
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><span>05.</span> LANÇAMENTOS</a>
+                <li>
+                    <span>5.</span>
+                    <a href="#"> Lançamentos</a> <!-- Link para a página "Lançamentos" -->
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><span>06.</span> CONTATOS</a>
+                <li>
+                    <span>6.</span>
+                    <a href="#"> Contato</a> <!-- Link para a página "Contato" -->
                 </li>
             </ul>
-        </div>
-    </nav>
-
-    <!-- Cabeçalho da página com uma imagem -->
-    <header>
-        <!-- Imagem que ocupa 100% da largura da tela -->
-        <img src="img/project-1.jpg" width="100%" alt="Projeto">
-    </header>
-
-    <!-- Script para adicionar a classe 'active' ao item de menu correspondente à página atual -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Obtém o caminho da página atual (ex: "index.html")
-            const currentPage = location.pathname.split('/').pop();
+        </div> <!-- Fim do contêiner do menu principal -->
+        <div> <!-- Fim do contêiner principal do menu de navegação -->
+    </nav> <!-- Fim da barra de navegação -->
+    
+    <header> <!-- Início do cabeçalho da página -->
+        <img src="img/project-1.jpg" width="100%"> <!-- Imagem de fundo do cabeçalho, que se ajusta para 100% da largura da página -->
+        
+        <div id="slide-bar"> <!-- Contêiner para a barra de slide (provavelmente para navegar entre projetos) -->
+            <h4>Lean Production</h4> <!-- Título ou nome do projeto em destaque no slide -->
             
-            // Seleciona todos os links dentro dos itens de menu
-            const menuItems = document.querySelectorAll('nav ul li a');
-
-            // Percorre cada item do menu
-            menuItems.forEach(item => {
-                // Verifica se o atributo 'href' do item corresponde à página atual
-                if (item.getAttribute('href') === currentPage) {
-                    // Adiciona a classe 'active' ao item correspondente
-                    item.classList.add('active');
-                }
-            });
-        });
-    </script>
+            <div class="seta esquerda"> <!-- Contêiner para a seta da esquerda, usada para navegar para o slide anterior -->
+                <a href="#"> <!-- Link para o slide anterior -->
+                    <img src="img\slides\arrow-left.png"> <!-- Imagem da seta apontando para a esquerda -->
+                </a>
+            </div>
+            
+            <div class="seta direita"> <!-- Contêiner para a seta da direita, usada para navegar para o próximo slide -->
+                <a href="#"> <!-- Link para o próximo slide -->
+                    <img src="img\slides\arrow-right.png"> <!-- Imagem da seta apontando para a direita -->
+                </a>
+            </div>
+        </div>
+    </header> <!-- Fim do cabeçalho da página -->
     
 </body>
 </html>
