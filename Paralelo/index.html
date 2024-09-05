@@ -1,80 +1,90 @@
-<!DOCTYPE html>
-<html lang="pt-br"> <!-- Define o tipo de documento como HTML5 e a linguagem da página como Português (Brasil) -->
+<!DOCTYPE html> <!-- Declara o tipo de documento como HTML5 -->
+<html lang="pt-br"> <!-- Define o idioma da página como Português (Brasil) -->
 <head>
-    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8, garantindo suporte a diferentes idiomas e símbolos -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Faz com que o layout seja ajustado corretamente para diferentes dispositivos, como celulares e tablets -->
-    <title>Parallelo Arquitetura e Construção</title> <!-- Define o título que aparece na aba do navegador quando a página é carregada -->
-    
-    <!-- Importa o arquivo de estilos CSS para dar estilo à página -->
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Importação da fonte Montserrat do Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8, permitindo caracteres especiais e acentuação -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta o layout da página para diferentes tamanhos de tela e dispositivos -->
+    <title>Parallelo Arquitetura e Construção</title> <!-- Define o título da página exibido na aba do navegador -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Importa o arquivo CSS para estilizar a página -->
+    <!-- Importação da fonte Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Estabelece uma conexão antecipada com o domínio Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Estabelece uma conexão antecipada com o domínio Google Fonts com credenciais -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> <!-- Importa a fonte Montserrat com diferentes pesos e estilos -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /> <!-- Importa os ícones do Material Symbols Outlined -->
 </head>
 <body>
 
-    <nav> <!-- Início da barra de navegação do site -->
+    <nav> <!-- Início do elemento de navegação -->
         <div id="mainMenu-geral"> <!-- Contêiner principal para o menu de navegação -->
 
         <div id="logo"> <!-- Div para o logotipo -->
-            <a href="index.html"> <!-- Link que redireciona para a página inicial -->
-                <img src="img/logo-white.png"> <!-- Imagem da logo do site, que está no diretório "img" -->
+            <a href="index.html"> <!-- Link para a página inicial -->
+                <img src="img/logo-white.png" alt="Logo"> <!-- Imagem do logotipo com texto alternativo para acessibilidade -->
             </a>
         </div>
         
-        <div id="mainMenu"> <!-- Contêiner que contém o menu principal -->
-            <ul> <!-- Lista não ordenada (ul) que contém os itens do menu -->
-                <!-- Cada "li" representa um item do menu -->
-                <li>
-                    <span>1.</span> <!-- Um número (span) associado ao item -->
-                    <a href="#"> Home</a> <!-- Link para a página "Home" -->
+        <div id="mainMenu"> <!-- Div para o menu principal -->
+            <ul> <!-- Lista não ordenada dos itens do menu -->
+                <li> <!-- Item do menu para a página Home -->
+                    <span>01.</span> <!-- Número do item do menu -->
+                    <a href="#"> Home</a> <!-- Link para a página Home -->
                 </li>
-                <li>
-                    <span>2.</span>
-                    <a href="#"> Trabalhos</a> <!-- Link para a página "Trabalhos" -->
+                <li> <!-- Item do menu para a página Trabalhos -->
+                    <span>02.</span> <!-- Número do item do menu -->
+                    <a href="#"> Trabalhos</a> <!-- Link para a página Trabalhos -->
                 </li>
-                <li>
-                    <span>3.</span>
-                    <a href="#"> Scaneamento</a> <!-- Link para a página "Scaneamento" -->
+                <li> <!-- Item do menu para a página Scaneamento -->
+                    <span>03.</span> <!-- Número do item do menu -->
+                    <a href="#"> Scaneamento</a> <!-- Link para a página Scaneamento -->
                 </li>
-                <li>
-                    <span>4.</span>
-                    <a href="#"> Sobre</a> <!-- Link para a página "Sobre" -->
+                <li> <!-- Item do menu para a página Sobre -->
+                    <span>04.</span> <!-- Número do item do menu -->
+                    <a href="#"> Sobre</a> <!-- Link para a página Sobre -->
                 </li>
-                <li>
-                    <span>5.</span>
-                    <a href="#"> Lançamentos</a> <!-- Link para a página "Lançamentos" -->
+                <li> <!-- Item do menu para a página Lançamentos -->
+                    <span>05.</span> <!-- Número do item do menu -->
+                    <a href="#"> Lançamentos</a> <!-- Link para a página Lançamentos -->
                 </li>
-                <li>
-                    <span>6.</span>
-                    <a href="#"> Contato</a> <!-- Link para a página "Contato" -->
+                <li> <!-- Item do menu para a página Contato -->
+                    <span>06.</span> <!-- Número do item do menu -->
+                    <a href="#"> Contato</a> <!-- Link para a página Contato -->
                 </li>
             </ul>
-        </div> <!-- Fim do contêiner do menu principal -->
-        <div> <!-- Fim do contêiner principal do menu de navegação -->
-    </nav> <!-- Fim da barra de navegação -->
+        </div>
+        </div>
+    </nav> <!-- Fim do elemento de navegação -->
     
     <header> <!-- Início do cabeçalho da página -->
-        <img src="img/project-1.jpg" width="100%"> <!-- Imagem de fundo do cabeçalho, que se ajusta para 100% da largura da página -->
-        
-        <div id="slide-bar"> <!-- Contêiner para a barra de slide (provavelmente para navegar entre projetos) -->
-            <h4>Lean Production</h4> <!-- Título ou nome do projeto em destaque no slide -->
-            
-            <div class="seta esquerda"> <!-- Contêiner para a seta da esquerda, usada para navegar para o slide anterior -->
-                <a href="#"> <!-- Link para o slide anterior -->
-                    <img src="img\slides\arrow-left.png"> <!-- Imagem da seta apontando para a esquerda -->
+        <img class="slide" src="img/slides/slidebg1.jpg" width="100%" alt="Imagem de Cabeçalho"> <!-- Imagem de fundo do cabeçalho, ocupando toda a largura da tela -->
+        <div id="slide-bar"> <!-- Contêiner para a barra de slides -->
+            <div id="txt_slide">
+                Projeto 
+            </div>
+            <div id="titulo_slide">
+            <h4>Lean Production</h4> <!-- Título do slide -->
+            </div>
+            <div class="seta esquerda"> <!-- Botão para navegar para a esquerda -->
+                <a href="#">
+                    <img src="img/slides/arrow-left.png" alt="Seta Esquerda"> <!-- Imagem da seta para a esquerda com texto alternativo -->
                 </a>
             </div>
-            
-            <div class="seta direita"> <!-- Contêiner para a seta da direita, usada para navegar para o próximo slide -->
-                <a href="#"> <!-- Link para o próximo slide -->
-                    <img src="img\slides\arrow-right.png"> <!-- Imagem da seta apontando para a direita -->
+            <div class="seta direita"> <!-- Botão para navegar para a direita -->
+                <a href="#">
+                    <img src="img/slides/arrow-right.png" alt="Seta Direita"> <!-- Imagem da seta para a direita com texto alternativo -->
                 </a>
             </div>
         </div>
     </header> <!-- Fim do cabeçalho da página -->
     
+    <div class="separador"> <!-- Separador visual entre seções -->
+    </div>
+    
+    <div id="frase"> <!-- Seção para frase inspiradora -->
+        <div class="icons"> <!-- Contêiner para ícones -->
+            <span class="material-symbols-outlined">construction</span> <!-- Ícone de construção -->
+            <span class="material-symbols-outlined">architecture</span> <!-- Ícone de arquitetura -->
+            <span class="material-symbols-outlined">content_cut</span> <!-- Ícone de corte de conteúdo -->
+        </div>
+        <p>"A arquitetura é a arte que determina a identidade do nosso tempo e<br>melhora a vida das pessoas." Santiago Calatrava</p> <!-- Frase inspiradora -->
+    </div>
 </body>
 </html>
